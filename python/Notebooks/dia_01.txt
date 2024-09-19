@@ -1,0 +1,70 @@
+criar projeto "Notebook"
+
+-abrir terminal
+
+poetry init
+- Package to add or search for (leave blank to skip): notebook - vai pesqisar 
+
+
+-criar ficheiro "Makefile"
+e executar "make start"
+automaticamente vai executar o que está dentro do Makefile
+
+
+
+
+
+-forçar a um tipo de dados
+list_a: list[str] = ["a","b"]
+
+definir variavel
+value = "c"
+-posso usar varivel na lista
+list_a: list[str] = ["a","b",value]
+
+
+definir função
+def func(a: str) -> str:
+    return "a"
+
+
+-declara dicionario
+dict_a = {
+    "KeyA": "valueA",
+    "keyA": "valueB",
+}
+-definir dicionario com tipo de dados definidos
+dict_a dict[str,str] = {
+    "KeyA": "valueA",
+    "keyA": "valueB",
+}
+
+dict_b = {
+    1: "a",
+    2: "b",
+}
+
+
+como aceder ao dados/valoes
+
+print (value) # mostrar o valor da variavel "value"
+
+print(list_a[1] - posição/indice da lista (começa em zero)
+r: "b"
+
+print(dict_a["KeyA"])
+r: valueA
+
+
+testar comprimento da lista para nao dar erro "out of range"
+if len(list_a) >= 3:
+    print(lista_a[3])
+
+
+list_a: list[str] = ["a","b",value,"d"]
+
+como deveria funcionar
+try:
+    print(lista_a[3])
+except:
+    print("indice fora da lista")
