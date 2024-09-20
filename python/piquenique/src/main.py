@@ -8,12 +8,24 @@ diogo_basket = [
 
 henrique_basket = []
 
-possible_fruit = input("Qual a fruta que posso levar?\n") 
 
-if possible_fruit in diogo_basket:
-    print("Esta fruto já esta na cesta\n")
-    print("Frutas na cesta do Diogo:", ",".join(diogo_basket))
-    
+possible_fruit = input("Qual a fruta Henrique pode levar?\n") 
+
+i = 1
+
+while ((len(possible_fruit)>0) and (i <= 10)):
+    if possible_fruit in diogo_basket:
+        print("Esta fruto já esta na cesta do Diogo:\n", ",".join(diogo_basket))
+    else:
+        i += 1
+        henrique_basket.append(possible_fruit)
+        print("Fruta adicionada ao cesto do Henrique:\n", ",".join( henrique_basket))
+    if i <= 10:
+        possible_fruit = input("Digite outra fruta para adicionar ao cesto ou deixe vazio para terminar?\n") 
+
+if len(henrique_basket) == 0:
+    print("malandro")
 else:
-    henrique_basket.append(possible_fruit)
-    print("Fruta no cesto do Henrique:\n", henrique_basket)
+    print(henrique_basket)
+    
+    
