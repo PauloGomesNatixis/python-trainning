@@ -57,7 +57,7 @@ if __name__ == "__main__":  #excutadp apenas quando executado diretamente o bask
     
     apple = Fruit("Apple","Red")
     banana= Fruit("Banana","yellow")
-    
+     
     basket_a.add_fruit(apple)
     basket_a.add_fruit(banana)
     
