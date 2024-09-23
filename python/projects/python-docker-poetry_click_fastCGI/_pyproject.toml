@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "python-docker-poetry_click"
+version = "0.1.0"
+description = ""
+authors = ["PauloGomesNatixis <paulo.gomes@natixis.com>"]
+readme = "README.md"
+packages = [
+    { include = "./src" },{ include = "*.py" },
+]
+
+[tool.poetry.scripts]
+hello = "src.commands:hello"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+fastapi = "^0.115.0"
+uvicorn = "^0.30.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

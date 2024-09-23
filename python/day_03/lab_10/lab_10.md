@@ -83,4 +83,4 @@ poetry run uvicorn src.main:app --reload --port 5000
 
 ### Hero Challenge
 
-- Adapt `simple_api` project `pyproject.toml` file to separate dependencies into flask and fastapi sections. Also remember to adapt the `Dockerfile` to install the correct dependencies.
+- Adapt `simple_api` project `pyproject.toml` file to separate dependencies into flask and fastapi sections. Also remember to adapt the `Dockerfile` to install the correct dependencies.   
