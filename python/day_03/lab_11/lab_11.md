@@ -16,7 +16,7 @@ In this lab, you will create a simple Django project with a single view that ret
 2. Initialize a new Poetry project:
 
 ```bash
-poetry init
+poetry init000
 ```
 
 3. Add the `Django` module as a dependency:
