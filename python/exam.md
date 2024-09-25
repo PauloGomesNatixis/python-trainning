@@ -36,7 +36,7 @@ print(c)
 
 a) 10
 b) 20
-c) 30
+c) 30 --
 d) 1020
 
 ### Question 2 (weight: 1; total: 2)
@@ -46,13 +46,13 @@ What is the command to enter the interactive Python interpreter?
 a) `python`
 b) `python3`
 c) `python3.10`
-d) All options are correct
+d) All options are correct --
 
 ### Question 3 (weight: 1; total: 3)
 
 How do you run a Python script from the command line. The current directory is `~/Documents`, the script is located in `~/Documents/my-script` and is called `script.py`.
 
-a) `python script.py`
+a) `python script.py` --
 b) `python my-script/script.py`
 c) `python ~/Documents/my-script`
 d) `python my-script`
@@ -61,7 +61,7 @@ d) `python my-script`
 
 Poetry, venv, pipenv and conda are all tools to:
 
-a) Create virtual environments and manage dependencies
+a) Create virtual environments and manage dependencies --
 b) Control the Python interpreter and the Python standard library
 c) Clear the Python cache and temporary files
 d) Share Python code with other developers and evaluate code quality
@@ -103,7 +103,7 @@ a: 1
 b: 2
 c: 6
 ```
-d) 
+d) --
 ```
 a: 2
 b: 2
@@ -130,7 +130,7 @@ obj = MyClass(10)
 print(obj)
 ```
 
-a) `MyClass(10)`
+a) `MyClass(10)` --
 b) `MyClass`
 c) `10`
 d) `MyClass object`
@@ -163,7 +163,7 @@ print(triangle.create_perimeter())
 
 a) `12`
 b) A TypeError is raised
-c) An AttributeError is raised
+c) An AttributeError is raised --
 d) `6.0`
 
 ---
@@ -175,15 +175,15 @@ d) `6.0`
 A Python virtual environment is a self-contained directory that contains a Python installation for a particular version of Python, plus a number of additional packages. Pandas and Django are examples of tools for creating virtual environments.
 
 a) True
-b) False
+b) False --
 
 ### Question 9 (weight: 3; total: 23)
 
 Select the options that are correct:
 
-[] Click is a Python library for creating command-line interfaces
+[x] Click is a Python library for creating command-line interfaces
 [] FastAPI is a Python library for creating parallel applications
-[] Django is a Python library for creating web applications
+[x] Django is a Python library for creating web applications
 [] Flask is a Python library for handling Docker containers
 
 ---
@@ -194,7 +194,7 @@ Select the options that are correct:
 
 The Poetry command to add a package on `development` group is:
 
-a) `poetry add --group development <package>`
+a) `poetry add --group development <package>` --
 b) `poetry add <package>`
 c) `poetry add --dev <package>`
 d) `poetry add --optional <package>`
@@ -205,7 +205,7 @@ And the one to install only the packages from the `production` group is:
 
 a) `poetry install`
 b) `poetry install --production`
-c) `poetry install --no-dev`
+c) `poetry install --no-dev` --
 d) `poetry install --only production`
 
 ### Question 12 (weight: 3; total: 28)
@@ -231,7 +231,7 @@ b: 20
 2
 3
 ```
-b)
+b) --
 ```
 1
 2
@@ -288,7 +288,7 @@ for _ in classes:
     print(_.multiply(2))
 ```
 
-a)
+a) 
 ```
 5.0
 5.0
@@ -304,7 +304,7 @@ b)
 10
 10
 ```
-c)
+c) --
 ```
 5.0
 2.5
@@ -342,7 +342,7 @@ print(person)
 
 a) A ValidationError is raised
 b) `Person(name='Alice', age=30)`
-c) `name='Alice' age=30`
+c) `name='Alice' age=30` --
 d) `Person object`
 
 ### Question 15 (weight: 2; total: 36)

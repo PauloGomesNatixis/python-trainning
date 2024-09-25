@@ -5,11 +5,9 @@ description = ""
 authors = ["PauloGomesNatixis <paulo.gomes@natixis.com>"]
 readme = "README.md"
 packages = [
-    { include = "./src" },{ include = "*.py" },
-]
+    {include = "./src"}
+    ]
 
-[tool.poetry.scripts]
-hello = "src.commands:hello"
 
 [tool.poetry.dependencies]
 python = "^3.10"
