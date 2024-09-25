@@ -21,7 +21,9 @@ class SampleModel(BaseModel):
     b: int
 
 class SampleClass:
-    def sample_function(self) -> AllModel:
+#    def sample_function(self) -> AllModel: #codigo errado
+    #def sample_function(self) -> BaseModel: #ou
+    def sample_function(self) -> Self: 
         return {
             'a': 'Hello',
             'b': 1
