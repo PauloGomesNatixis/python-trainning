@@ -1,5 +1,5 @@
-from cgi import test
-from pydantic import BaseModel
+#from cgi import test
+#from pydantic import BaseModel # type: ignore
 
 class Calculator(BaseModel):
     a: int
@@ -12,6 +12,7 @@ class Calculator(BaseModel):
         result = self.a - self.b
         if result <0:
             raise ValueError('resultado menor que zero')
+            #print('resultado menor que zero')
         else:
             return result
 
