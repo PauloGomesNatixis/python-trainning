@@ -3,7 +3,8 @@ from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 from alembic import context
 
-from src.models.user import Company, User, Product
+from src.models.base import Base
+from src.models.user import Product
 
 
 # this is the Alembic Config object, which provides
@@ -20,7 +21,7 @@ if config.config_file_name is not None:
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 # ANCHOR[id=alembic_target_metadata]
-target_metadata = [User.metadata,Product.metadata,Company.metadata]
+target_metadata = [Product.metadata]
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:

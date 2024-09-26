@@ -3,7 +3,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 
 #from sqlalchemy import Declarativebase, Mapped, mappedColum
 
-from models.base import Base
+from base import Base
 
     
 class User(Base):

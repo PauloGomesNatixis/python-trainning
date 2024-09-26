@@ -19,7 +19,7 @@ def main():
         8. Drops the tables from the database.
     """
     with Database("sqlite.db") as db:
-        db.create_tables()
+        #db.create_tables()
 
         users = [
             User(name="John Doe"),
@@ -51,7 +51,7 @@ def main():
             db.create_company(user)
 
 
-witd Database.create_company
+#witd Database.create_company
 
 # # Assuming you have models defined like User and Product
 # new_user = User(name="John Doe", email="john@example.com")
