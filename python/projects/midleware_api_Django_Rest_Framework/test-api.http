@@ -1,0 +1,28 @@
+### Get all tasks
+GET http://localhost:8000/tasks/
+
+### Create a new task
+POST http://localhost:8000/tasks/
+Content-Type: application/json
+
+{
+  "title": "Finish the Django project",
+  "description": "Complete all tasks in the Django Rest Framework lab",
+  "completed": false
+}
+
+### Get a specific task by ID
+GET http://localhost:8000/tasks/1/
+
+### Update a task by ID
+PUT http://localhost:8000/tasks/9/
+Content-Type: application/json
+
+{
+  "title": "Finish the Django project",
+  "description": "Update the task to mark it as completed",
+  "completed": true
+}
+
+### Delete a task by ID
+DELETE http://localhost:8000/tasks/

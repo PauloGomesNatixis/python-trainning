@@ -1,9 +1,23 @@
-from sqlalchemy import Integer, String
+from sqlalchemy.orm import DeclarativeBase
+#from src.models.base import Base
+
+# NOTE: Every new model needs to be added on migrations/env.py and then migrated -> upgraded.
+# LINK: python/day_06/examples/database/migrations/env.py#alembic_target_metadata
+
+
+from sqlalchemy import Float, Integer, String
 from sqlalchemy.orm import Mapped, mapped_column
 
-from models.base import Base
+#from sqlalchemy import Declarativebase, Mapped, mappedColum
+
+#from base import Base
 
 
+class Base(DeclarativeBase):
+    pass
+
+
+    
 class User(Base):
     """
     User model class representing a user in the database.
@@ -25,10 +39,6 @@ class User(Base):
     name: Mapped[str] = mapped_column(String)
     email: Mapped[str] = mapped_column(String)
 
-    def __repr__(self):
-        return f"<User(name={self.name})>"
-
-
 
 class Product(Base):
     """
@@ -49,7 +59,7 @@ class Product(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     name: Mapped[str] = mapped_column(String)
-    #price: Mapped[str] = mapped_column(String)
+    price: Mapped[float] = mapped_column(Float)
 
 
 class Company(Base):

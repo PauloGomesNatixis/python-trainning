@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "midleware-api-django-rest-framework"
+version = "0.1.0"
+description = ""
+authors = ["PauloGomesNatixis <paulo.gomes@natixis.com>"]
+readme = "README.md"
+#packages = [{ include = "src", from = "." }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.1.1"
+djangorestframework = "^3.15.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

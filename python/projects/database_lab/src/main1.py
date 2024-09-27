@@ -1,5 +1,8 @@
-from models.user import User, Company, Product
 from db import Database
+from models.user import Company, User, Product
+
+
+
 
 
 def main():
@@ -16,7 +19,7 @@ def main():
         8. Drops the tables from the database.
     """
     with Database("sqlite.db") as db:
-        db.create_tables()
+        #db.create_tables()
 
         users = [
             User(name="John Doe"),
@@ -26,7 +29,7 @@ def main():
         ]
 
         for user in users:
-            db.create_user(user)
+            db.create(users) #create_user(user)
 
         user = db.get_user(1)
 
@@ -34,10 +37,37 @@ def main():
 
         if user:
             db.update_user(user_id=user.id, name="John Smith")
-
             db.delete_user(user_id=user.id)
 
-        db.drop_tables()
+
+        companies = [
+            Company(name="AAAAA"),
+            User(name="BBB"),
+            User(name="CCCC"),
+            User(name="DDDD"),
+        ]
+
+        for user in companies:
+            db.create_company(user)
+
+
+#witd Database.create_company
+
+# # Assuming you have models defined like User and Product
+# new_user = User(name="John Doe", email="john@example.com")
+# new_product = Product(name="Laptop", price=1000.00)
+
+# # Create a user record
+# self.create_record(User, new_user)
+
+# # Create a product record
+# self.create_record(Product, new_product)
+
+
+
+
+#        db.drop_tables()
+
 
 
 if __name__ == "__main__":
