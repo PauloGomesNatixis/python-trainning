@@ -23,13 +23,13 @@ from .models import Task2
 class Task2Serializer(serializers.ModelSerializer):
     #user=PrimaryKeyRelatedField(read_only=True, default=CurrentUserDefault())
     class Meta:
-        model = Task
-        fields = ['title', 'description', 'modified', 'completed', 'user']
+        model = Task2
+        fields = ['user', 'title', 'description', 'modified', 'completed']
         
     def create(self, validated_data):
         reques= self.context.get('request')
         assert request
-        result = Task(
+        result = Task2(
             user=request.user,
             **validated_data,
         )

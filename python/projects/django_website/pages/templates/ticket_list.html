@@ -1,0 +1,22 @@
+<!-- tickets/templates/tickets/ticket_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket List</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>All Tickets</h1>
+    <a href="{% url 'create_ticket' %}">Create a new ticket</a>
+    <ul>
+        {% for ticket in tickets %}
+        <li>
+            <strong>{{ ticket.title }}</strong><br>
+            {{ ticket.description }}<br>
+            Status: {{ ticket.get_status_display }}<br>
+            Created: {{ ticket.created_at }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

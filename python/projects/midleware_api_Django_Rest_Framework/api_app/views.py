@@ -29,6 +29,6 @@ from .models import Task2
 from .serializers import Task2Serializer
 class Task2ViewSet(viewsets.ModelViewSet):
     queryset = Task2.objects.all()
-    serializer_class = TaskSerializer
+    serializer_class = Task2Serializer
 
 

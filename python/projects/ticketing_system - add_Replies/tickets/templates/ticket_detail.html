@@ -1,0 +1,36 @@
+<!-- tickets/templates/tickets/ticket_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket Details</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>{{ ticket.title }}</h1>
+    <p>{{ ticket.description }}</p>
+    <p>Status: {{ ticket.get_status_display }}</p>
+    <p>Created: {{ ticket.created_at }}</p>
+
+    <h2>Replies</h2>
+    <ul>
+        {% for reply in replies %}
+        <li>
+            {{ reply.message }}<br>
+            <small>Posted on: {{ reply.created_at }}</small>
+        </li>
+        {% empty %}
+        <li>No replies yet.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Post a Reply</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Post Reply</button>
+    </form>
+
+    <a href="{% url 'ticket_list' %}">Back to ticket list</a>
+</body>
+</html>

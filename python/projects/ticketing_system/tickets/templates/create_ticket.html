@@ -1,0 +1,16 @@
+<!-- tickets/templates/tickets/create_ticket.html -->
+{% extends 'base.html' %}
+
+{% block title %}Create Ticket{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h1>Create a New Ticket</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="button">Create Ticket</button>
+    </form>
+    <a href="{% url 'ticket_list' %}" class="back-link">Back to ticket list</a>
+</div>
+{% endblock %}
