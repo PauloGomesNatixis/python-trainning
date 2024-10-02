@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "django-project"
+version = "0.1.0"
+description = ""
+authors = ["PauloGomesNatixis <paulo.gomes@natixis.com>"]
+readme = "README.md"
+packages = [
+    {include = "./setup"},
+    {include = "./website"},
+    {include = "./api"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.1.1"
+djangorestframework = "^3.15.2"
+markdown = "^3.7"
+django-filter = "^24.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

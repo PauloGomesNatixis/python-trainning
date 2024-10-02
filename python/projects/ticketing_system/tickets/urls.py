@@ -2,15 +2,14 @@
 from django.urls import path, include
 from django.contrib.auth import views as auth_views  # Import the auth views
 from . import views
-#ticket_list, create_ticket, 
+
 from .views import signup  # Import the signup view
 from .views import edit_ticket # Import edit ticket 
 from .views import ticket_detail
-from django.urls import path
-#from .views import 
 from .views import ticket_list
 from .views import create_ticket
 from .views import logout_view  # Import your custom logout view
+#from .views import 
 
 
 urlpatterns = [

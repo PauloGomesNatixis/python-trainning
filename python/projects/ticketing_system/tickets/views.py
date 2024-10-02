@@ -11,6 +11,7 @@ from django.contrib.auth import logout as auth_logout
 from django.db.models import Q
 
 
+
 #@login_required
 def ticket_list(request):
     query = request.GET.get('q')

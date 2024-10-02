@@ -7,7 +7,6 @@ from src.modules.add import add
 class TestAdd(unittest.TestCase):
     """
     A test case for the add function.
-
     Methods:
         - setUp: Set up the test case.
         - tearDown: Tear down the test case.

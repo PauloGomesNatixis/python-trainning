@@ -1,0 +1,99 @@
+/* General Styles */
+
+/* Ensure the HTML and body take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #f1c40f;
+}
+
+/* Ensure the container grows to fill space before the footer */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Ensures the content grows to fill available space */
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2c3e50;
+    color: white;
+    width: 100%;
+    position: relative;
+    margin-top: auto; /* This ensures the footer is pushed to the bottom */
+}
+
+/* Optional styling to ensure the footer stands out */
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Buttons and Links */
+.button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+.back-link, .link {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.back-link:hover, .link:hover {
+    color: #2980b9;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
