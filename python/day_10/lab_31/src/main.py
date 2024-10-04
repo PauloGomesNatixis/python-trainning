@@ -100,3 +100,31 @@ class Post(BaseModel):
     
 post = Post(userId=1, id=101, title="My First Post", body="This is the content of my first post.")
 print(post)
+
+
+print("\n\n\nOptional Challenge")
+
+### Optional Challenge
+#- Create a function called `get_image` that makes a GET request to a URL and saves the image content to a file.
+
+import requests
+
+def get_image(url: str, filename: str) -> None:
+    """
+    Make a GET request to a URL and save the image content to a file.
+
+    Args:
+        url (str): The URL to make the request to.
+        filename (str): The filename to save the image as.
+    """
+    response = requests.get(url)
+    print(response)
+    if response.status_code == 200:
+        with open(filename, 'wb') as file:
+            file.write(response.content)
+        print(f'Image saved as {filename}')
+    else:
+        print(f'Failed to retrieve image. Status code: {response.status_code}')
+
+# Example usage
+get_image('https://via.placeholder.com/150', 'image.png')
