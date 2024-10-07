@@ -36,7 +36,7 @@ print(c)
 
 a) 10
 b) 20
-c) 30 --
+c)-- 30 --
 d) 1020
 
 ### Question 2 (weight: 1; total: 2)
@@ -46,14 +46,14 @@ What is the command to enter the interactive Python interpreter?
 a) `python`
 b) `python3`
 c) `python3.10`
-d) All options are correct --
+d)-- All options are correct
 
 ### Question 3 (weight: 1; total: 3)
 
 How do you run a Python script from the command line. The current directory is `~/Documents`, the script is located in `~/Documents/my-script` and is called `script.py`.
 
-a) `python script.py` --
-b) `python my-script/script.py`
+a) `python script.py` 
+b)-- `python my-script/script.py`
 c) `python ~/Documents/my-script`
 d) `python my-script`
 
@@ -61,7 +61,7 @@ d) `python my-script`
 
 Poetry, venv, pipenv and conda are all tools to:
 
-a) Create virtual environments and manage dependencies --
+a)-- Create virtual environments and manage dependencies
 b) Control the Python interpreter and the Python standard library
 c) Clear the Python cache and temporary files
 d) Share Python code with other developers and evaluate code quality
@@ -163,7 +163,7 @@ print(triangle.create_perimeter())
 
 a) `12`
 b) A TypeError is raised
-c) An AttributeError is raised --
+c)-- An AttributeError is raised
 d) `6.0`
 
 ---
@@ -194,7 +194,7 @@ Select the options that are correct:
 
 The Poetry command to add a package on `development` group is:
 
-a) `poetry add --group development <package>` --
+a)-- `poetry add --group development <package>`
 b) `poetry add <package>`
 c) `poetry add --dev <package>`
 d) `poetry add --optional <package>`
@@ -205,8 +205,8 @@ And the one to install only the packages from the `production` group is:
 
 a) `poetry install`
 b) `poetry install --production`
-c) `poetry install --no-dev` --
-d) `poetry install --only production`
+c)xx `poetry install --no-dev`
+d)-- `poetry install --only production`
 
 ### Question 12 (weight: 3; total: 28)
 
@@ -342,7 +342,7 @@ print(person)
 
 a) A ValidationError is raised
 b) `Person(name='Alice', age=30)`
-c) `name='Alice' age=30` --
+c)-- `name='Alice' age=30`
 d) `Person object`
 
 ### Question 15 (weight: 2; total: 36)
@@ -359,7 +359,7 @@ What will be the output of the previous code if we add the following line to the
 a) The code will raise a SyntaxError
 b) `Person object`
 c) `name='Alice' age=30`
-d) `Alice is 30 years old`
+d)-- `Alice is 30 years old`
 
 ### Question 16 (weight: 5; total: 41)
 
@@ -387,7 +387,7 @@ with MyClass(10) as obj:
     print('C')
 ```
 
-a)
+a)--
 ```
 B
 5.0
@@ -420,11 +420,11 @@ A
 
 A generator is a function that returns an iterator. It looks like a normal function but contains a `yield` statement. The `yield` statement pauses the function and saves the local state of the function. The state is remembered across successive calls. Select the options that correctly defines the main built-in generators in Python:
 
-[] `enumerate` - returns an iterator of tuples containing an index and the value of an iterable
+[-] `enumerate` - returns an iterator of tuples containing an index and the value of an iterable
 [] `filter` - creates a list of elements for which a function returns true. It must be a `lambda` function
-[] `map` - applies a function to all the items in an input list
+[-] `map` - applies a function to all the items in an input list
 [] `range` - returns a sequence of positive numbers
-[] `zip` - aggregates elements from two or more iterables
+[-] `zip` - aggregates elements from two or more iterables
 
 ---
 
@@ -441,9 +441,9 @@ def dataclass(cls=None, /, *, init=True, repr=True, eq=True, order=False,
     ...
 ```
 
-[] The __init__() method is added to the class by default
-[] The __repr__() method is added to the class by default
-[] The __eq__() method is added to the class by default
+[-] The __init__() method is added to the class by default
+[-] The __repr__() method is added to the class by default
+[-] The __eq__() method is added to the class by default
 [] The __hash__() method is added to the class by default
 
 ### Question 19 (weight: 3; total: 54)
@@ -459,7 +459,7 @@ for i in l:
         result.append(i ** 2)
 ```
 
-a) `[i ** 2 for i in l if i % 2 == 0]`
+a)-- `[i ** 2 for i in l if i % 2 == 0]`
 b) `[i ** 2 for i in l]`
 c) `[i for i in l if i % 2 == 0]`
 d) `[i for i in l]`
@@ -484,7 +484,7 @@ class User(Base):
         return f"<User(name={self.name})>"
 ```
 
-a) SQLAlchemy model
+a)-- SQLAlchemy model
 b) Pydantic model
 c) Django model
 d) FastAPI model
@@ -512,23 +512,23 @@ router.include_router(nested_router, prefix="/nested")
 a) Django Rest Framework
 b) Flask
 c) SQLAlchemy
-d) FastAPI
+d)-- FastAPI
 
 ### Question 22 (weight: 3; total: 63)
 
 When running the previous code, the developer complains that the `/nested` endpoint is not working. What is the most likely reason?
 
-a) The `nested_router` is not included in the `router`
+a)x The `nested_router` is not included in the `router`
 b) The `router` is not a `GET` method
 c) The `nested_router` is not returning a response
-d) The `router` is not included in the `app`
+d)- The `router` is not included in the `app`
 
 ### Question 23 (weight: 3; total: 66)
 
 The main difference between FastAPI and Django Rest Framework models is:
 
 a) Django Rest Framework does not have models, only serializers
-b) FastAPI models are based on Pydantic models, while Django Rest Framework models are based on Django models
+b)- FastAPI models are based on Pydantic models, while Django Rest Framework models are based on Django models
 c) FastAPI models can be created using `python manage.py startmodel`, while Django Rest Framework models are created using `poetry add model`
 d) Django Rest Framework models are based on Pydantic models, while FastAPI models are based exclusively on dataclasses
 
@@ -538,7 +538,7 @@ Django Rest Framework relies on the following concepts to create APIs:
 
 a) Serializers, Views and Templates
 b) Serializers, Forms and Views
-c) Models, Serializers and Views
+c)-  Models, Serializers and Views
 d) Models, Serializers and Forms
 
 ---
@@ -551,14 +551,14 @@ Django relies on the following concepts to create web applications:
 
 a) Serializers, Models and Views
 b) Models, Views and Forms
-c) Models, Views and Templates
+c)- Models, Views and Templates
 d) Forms, Views and Templates
 
 ### Question 26 (weight: 3; total: 75)
 
 Which class is used to create a Django model?
 
-a) The class `Model` from the `django.db.model` module
+a)- The class `Model` from the `django.db.model` module
 b) The class `BaseModel` from the `django.db` module
 c) The class `Model` from the `django.db` module
 d) The class `BaseModel` from the `django.db.model` module
@@ -579,7 +579,7 @@ class Person(...):
 ```
 
 a) Create two new fields called `job_name` and `job_description` in the `Person` model
-b) Create a new model called `Job` with the desired fields and add a `ForeignKey` field to the `Person` model
+b)-- Create a new model called `Job` with the desired fields and add a `ForeignKey` field to the `Person` model
 c) Create a new model called `Job` with the desired fields and add a `OneToOneField` field to the `Person` model
 d) Create a new model called `Job` with the desired fields and add a `ManyToManyField` field to the `Person` model
 
@@ -587,7 +587,7 @@ d) Create a new model called `Job` with the desired fields and add a `ManyToMany
 
 After changing the `Person` model to include the `Job` model, the developer is unable to create a new person, because he keeps receiving a `Table ... doesn't exist` error. What is the most likely reason?
 
-a) The developer forgot to run the `makemigrations` and `migrate` commands
+a)-- The developer forgot to run the `makemigrations` and `migrate` commands
 b) The `Job` model is not registered in the Django admin
 c) The `Job` model is not imported in the `Person` model
 d) The field does not have `related_name` attribute set
@@ -619,7 +619,7 @@ c)
 a: 10, b: 20
 30
 ```
-d)
+d)---
 ```
 DEBUG:root:a: 10, b: 20
 30
@@ -713,8 +713,8 @@ C
 Name: A, dtype: int64
 ```
 [] The dataframe object `D` is the sorted dataframe by the column `B` in ascending order
-[] The dataframe object `E` is the result of merging two dataframes based on the column `A`
-[] The dataframe object `F` is as follows:
+[-] The dataframe object `E` is the result of merging two dataframes based on the column `A`
+[-] The dataframe object `F` is as follows:
 ```
 A  B_1  C_1  B_2  C_2
 0  1    4    7    7   10
@@ -772,9 +772,9 @@ C = data_b['id']
 
 Select the options that are correct:
 
-[] The variable `C` is the title of the GET request to the post with id 2
-[] The variable `A` is the title of the GET request to the post with id 1
-[] The variable `B` is the status code of the request to the post with id 2
-[] The variable `C` is the id of the GET request to the post with id 1
+[-] The variable `C` is the title of the GET request to the post with id 2
+[-] The variable `A` is the title of the GET request to the post with id 1
+[-] The variable `B` is the status code of the request to the post with id 2
+[x] The variable `C` is the id of the GET request to the post with id 1
 [] The variable `A` is the status code of the request to the post with id 1
 ```

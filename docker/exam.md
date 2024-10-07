@@ -16,9 +16,9 @@ Each day has at least 02 questions of multiple choice, multiple selection or tru
 
 About virtual machine and containers, select the correct statements:
 
-[] Containers are lightweight and share the host OS kernel
-[] VMs and containers abstracts physical hardware
-[] VMs require guest OS
+[x] Containers are lightweight and share the host OS kernel
+[x] VMs and containers abstracts physical hardware
+[x] VMs require guest OS
 [] Containers are slower than VMs
 [] Containers are more secure than VMs
 
@@ -27,7 +27,7 @@ About virtual machine and containers, select the correct statements:
 A Dockerfile is:
 
 a) A file that contains the instructions to run a Docker container
-b) A file that contains the instructions to build a Docker image
+b)x A file that contains the instructions to build a Docker image
 c) A file that contains the instructions to build a Docker container
 d) A file that contains the instructions to run a Docker image
 
@@ -38,14 +38,14 @@ A registry is:
 a) A place where you can run your Docker containers
 b) A place to register the bind mounts
 c) A place where you can store your Docker containers
-d) A place where you can store your Docker images
+d)x A place where you can store your Docker images
 
 ### Question 4 (weight: 5; total: 20)
 
 A developer wants to `bash` into a running container. Which command should be used?
 
 a) `docker run -it <container_id> bash`
-b) `docker exec -it <container_id> bash`
+b)x `docker exec -it <container_id> bash`
 c) `docker start -it <container_id> bash`
 d) `docker attach -it <container_id> bash`
 
@@ -63,7 +63,7 @@ But he wants to override the command and run the container with the command `pyt
 
 a) `docker run -it <image_id> --entrypoint "python app.py" --debug`
 b) `docker run -it <image_id> --entrypoint "python app.py --debug"`
-c) `docker run -it <image_id> python app.py --debug`
+c)x `docker run -it <image_id> python app.py --debug`
 d) `docker run -it <image_id> --entrypoint "python app.py" -- --debug`
 
 ### Question 6 (weight: 10; total: 35)
@@ -95,7 +95,7 @@ The developer complains that the container is not running the `app.py` file. Wha
 
 a) The `WORKDIR` should be `/app/` or the same name as the directory
 b) The `CMD` instruction is wrong
-c) The `app.py` file is not being copied to the container
+c)x The `app.py` file is not being copied to the container
 d) The `requirements.txt` file is not being copied to the container
 
 ---
@@ -106,9 +106,9 @@ d) The `requirements.txt` file is not being copied to the container
 
 About Docker volumes, select the correct statements:
 
-[] Volumes are used to persist data between container restarts
-[] Volumes are used to share data between containers
-[] Volumes are used to share data between the host and the container
+[x] Volumes are used to persist data between container restarts
+[x] Volumes are used to share data between containers
+[x] Volumes are used to share data between the host and the container
 [] Volumes are used to share data between the host and the image
 [] Volumes are used to share data between the image and the container
 
@@ -116,7 +116,7 @@ About Docker volumes, select the correct statements:
 
 The developer wants to push a Docker image to a registry with hostname `registry.example.com` and repository `myapp`. The image should be tagged as `latest`. Which command should be used?
 
-a) `docker push registry.example.com/myapp/latest`
+a)x `docker push registry.example.com/myapp/latest`
 b) `docker tag <image_id> registry.example.com/myapp` and `docker push registry.example.com/myapp`
 c) `docker tag <image_id> registry.example.com/myapp` and `docker push --latest registry.example.com/myapp`
 d) `docker tag <image_id> registry.example.com/myapp`
@@ -128,7 +128,7 @@ All application files are in `app/` directory. The developer wants to run the ap
 a) `docker bind-volume app/:/app <container_id>`
 b) `docker build -v app/:/app .`
 c) `docker run -v app/:/app <container_id>`
-d) `docker run -v app/:/app <image_id>`
+d)x `docker run -v app/:/app <image_id>`
 
 ### Question 10 (weight: 5; total: 55)
 
@@ -143,7 +143,7 @@ The developer wants to run a container with the following requirements:
 Which command should be used?
 
 a) `docker run -d -remove --name myapp --port 80 -e DEBUG=true <image_id>`
-b) `docker run -d --rm --name myapp -p 80 -e DEBUG=true <image_id>`
+b)x `docker run -d --rm --name myapp -p 80 -e DEBUG=true <image_id>`
 c) `docker run --name myapp -p 80 -e DEBUG=true <container_id>`
 e) `docker run --rm --name myapp -p 80 -e DEBUG=true <image_id>`
 
@@ -170,7 +170,7 @@ services:
     ...
     volume: "myapp-data:/app"
 ```
-b) Add a `volumes` key to the service configuration
+b)x Add a `volumes` key to the service configuration
 ```
 services:
   myapp:
@@ -202,7 +202,7 @@ services:
 
 The developer has an environment file named `.env` and wants to use it in a Docker compose file. How the developer can use the environment file in the Docker compose file?
 
-a) Add a `env_file` key to the service configuration and reference the `.env` file
+a)x Add a `env_file` key to the service configuration and reference the `.env` file
 b) Add a `environment` key to the service configuration and add the environment variables
 c) Just adding the `.env` file in the same directory as the Docker compose file
 d) Add a `env` key to the service configuration and reference the `.env` file
@@ -213,7 +213,7 @@ The three main states of a Docker container are:
 
 a) Built, Running, Stopped
 b) Created, Running, Paused
-c) Created, Running, Stopped
+c)x Created, Running, Stopped
 d) Built, Running, Paused
 
 ---
@@ -240,10 +240,10 @@ EXPOSE 8000
 
 Select the correct statements:
 
-[] The base image is `python:3.11-slim`
-[] Since `poetry install` commands depends on `pyproject.toml` and `poetry.lock` files and assuming that those files exists, the `poetry install` command will be fail because the `pyproject.toml` and `poetry.lock` files are not being copied to the container
+[x] The base image is `python:3.11-slim`
+[x] Since `poetry install` commands depends on `pyproject.toml` and `poetry.lock` files and assuming that those files exists, the `poetry install` command will be fail because the `pyproject.toml` and `poetry.lock` files are not being copied to the container
 [] Poetry already exists in the base image
-[] The container will expose port 8000
+[x] The container will expose port 8000
 [] When the developer runs the container based on the image built from this Dockerfile, the container will automatically bind the container port 8000 to the host port 8000
 
 ### Question 15 (weight: 15; total: 100)
@@ -294,11 +294,11 @@ networks:
 Select the correct statements:
 
 [] The `app` service will be available at `http://localhost:5432`
-[] The `app` service will be available at `http://localhost:8000`
+[x] The `app` service will be available at `http://localhost:8000`
 [] The `app` service will run a PostgreSQL database
-[] The `app` service will run a Uvicorn application
-[] The `postgres` service will be available at `http://localhost:5432`
+[x] The `app` service will run a Uvicorn application
+[x] The `postgres` service will be available at `http://localhost:5432`
 [] The `postgres` service will be available at `http://localhost:8000`
-[] The `postgres` service will run a PostgreSQL database
-[] Since the network is a bridge network, the `app` and `postgres` services will be able to communicate with each other using the service name
+[x] The `postgres` service will run a PostgreSQL database
+[x] Since the network is a bridge network, the `app` and `postgres` services will be able to communicate with each other using the service name
 ```
