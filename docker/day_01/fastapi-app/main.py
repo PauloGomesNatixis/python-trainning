@@ -1,0 +1,14 @@
+import sys
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
+
+# if __name__ == "__main__":
+#     arg_1 = sys.argv[1]
+
+    
