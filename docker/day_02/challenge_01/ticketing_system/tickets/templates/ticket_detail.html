@@ -1,0 +1,36 @@
+<!-- tickets/templates/tickets/ticket_detail.html -->
+{% extends 'base.html' %}
+
+{% block title %}Ticket Details{% endblock %}
+
+{% block content %}
+<div class="ticket-detail-container">
+    <h1>{{ ticket.title }}</h1>
+    <p class="ticket-description">{{ ticket.description }}</p>
+    <p>Status: <span class="ticket-status">{{ ticket.get_status_display }}</span></p>
+    <p>Created: <span class="ticket-created">{{ ticket.created_at }}</span></p>
+
+    <h2>Replies</h2>
+    <ul class="reply-list">
+        {% for reply in replies %}
+        <li>
+            <div class="reply-item">
+                <p>{{ reply.message }}</p>
+                <small class="reply-date">Posted on: {{ reply.created_at }}</small>
+            </div>
+        </li>
+        {% empty %}
+        <li>No replies yet.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Post a Reply</h2>
+    <form method="post" class="reply-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="button">Post Reply</button>
+    </form>
+
+    <a href="{% url 'ticket_list' %}" class="back-link">Back to ticket list</a>
+</div>
+{% endblock %}

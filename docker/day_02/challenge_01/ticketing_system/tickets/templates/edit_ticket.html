@@ -1,0 +1,16 @@
+<!-- tickets/templates/tickets/edit_ticket.html -->
+{% extends 'base.html' %}
+
+{% block title %}Edit Ticket{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h1>Edit Ticket: {{ ticket.title }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="button">Save Changes</button>
+    </form>
+    <a href="{% url 'ticket_list' %}" class="back-link">Cancel</a>
+</div>
+{% endblock %}

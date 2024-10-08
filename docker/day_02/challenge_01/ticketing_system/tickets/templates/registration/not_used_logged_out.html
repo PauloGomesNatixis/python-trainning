@@ -1,0 +1,15 @@
+<!-- tickets/templates/registration/logged_out.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged Out</title>
+</head>
+<body>
+    <h1>You have been logged out.</h1>
+    <p><a href="{% url 'login' %}">Login again</a></p>
+    <p><a href="{% url 'ticket_list' %}">Return to ticket list</a></p>
+</body>
+</html>
