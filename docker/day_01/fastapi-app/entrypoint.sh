@@ -16,7 +16,7 @@ bash)
     exec bash
     ;;
 fastapi)
-    exec poetry run uvicorn main:app --host 0.0.0.0 --port 8000
+    exec poetry run uvicorn src.main:app --host 0.0.0.0 --port 8000
     ;;
 *)
     print_help
