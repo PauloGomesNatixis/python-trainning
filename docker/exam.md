@@ -17,7 +17,7 @@ Each day has at least 02 questions of multiple choice, multiple selection or tru
 About virtual machine and containers, select the correct statements:
 
 [x] Containers are lightweight and share the host OS kernel
-[x] VMs and containers abstracts physical hardware
+[] VMs and containers abstracts physical hardware
 [x] VMs require guest OS
 [] Containers are slower than VMs
 [] Containers are more secure than VMs
@@ -116,8 +116,8 @@ About Docker volumes, select the correct statements:
 
 The developer wants to push a Docker image to a registry with hostname `registry.example.com` and repository `myapp`. The image should be tagged as `latest`. Which command should be used?
 
-a)x `docker push registry.example.com/myapp/latest`
-b) `docker tag <image_id> registry.example.com/myapp` and `docker push registry.example.com/myapp`
+a) `docker push registry.example.com/myapp/latest`
+b)x `docker tag <image_id> registry.example.com/myapp` and `docker push registry.example.com/myapp`
 c) `docker tag <image_id> registry.example.com/myapp` and `docker push --latest registry.example.com/myapp`
 d) `docker tag <image_id> registry.example.com/myapp`
 
@@ -241,7 +241,7 @@ EXPOSE 8000
 Select the correct statements:
 
 [x] The base image is `python:3.11-slim`
-[x] Since `poetry install` commands depends on `pyproject.toml` and `poetry.lock` files and assuming that those files exists, the `poetry install` command will be fail because the `pyproject.toml` and `poetry.lock` files are not being copied to the container
+[] Since `poetry install` commands depends on `pyproject.toml` and `poetry.lock` files and assuming that those files exists, the `poetry install` command will be fail because the `pyproject.toml` and `poetry.lock` files are not being copied to the container
 [] Poetry already exists in the base image
 [x] The container will expose port 8000
 [] When the developer runs the container based on the image built from this Dockerfile, the container will automatically bind the container port 8000 to the host port 8000
